@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Home() {
@@ -33,8 +34,8 @@ export default function Home() {
             <p className="text-secondary text-lg font-bold py-8 w-3/5">
               O Fiat Freemont é um carro de <span className="text-primary">7 lugares</span> com alto índice de segurança, e com um conforto sensacional, que é perfeito para viagens longas, sem deixar de ser ideal para quem gosta de rodar dentro da cidade.
             </p>
-            <button className="bg-primary w-48 h-12 rounded-lg text-white font-bold hover:bg-white hover:text-primary my-6">
-              Conheça o Carro</button>
+            <Button className="bg-primary w-48 h-12 rounded-[8px] text-white font-bold hover:bg-white hover:text-primary my-6">
+              Conheça o Carro</Button>
           </span>
 
           <Image
@@ -50,21 +51,21 @@ export default function Home() {
             O Carro <span className="text-primary text-6xl">:</span>
           </h1>
           <ul className="flex justify-around font-bold text-primary cursor-pointer text-lg">
-            <button className="hover:bg-primary rounded-lg hover:text-white w-1/5 text-center h-12">
+            <Button variant='ghost' className="hover:bg-primary rounded-lg hover:text-white w-1/5 text-center h-12">
               DESIGN
-            </button>
-            <button className="hover:bg-primary rounded-lg hover:text-white w-1/5 text-center h-12">
+            </Button>
+            <Button variant='ghost' className="hover:bg-primary rounded-lg hover:text-white w-1/5 text-center h-12">
               INTERIOR
-            </button>
-            <button className="hover:bg-primary rounded-lg hover:text-white w-1/5 text-center h-12">
+            </Button>
+            <Button variant='ghost' className="hover:bg-primary rounded-lg hover:text-white w-1/5 text-center h-12">
               TECNOLOGIA
-            </button>
-            <button className="hover:bg-primary rounded-lg hover:text-white w-1/5 text-center h-12">
+            </Button>
+            <Button variant='ghost' className="hover:bg-primary rounded-lg hover:text-white w-1/5 text-center h-12">
               PERFORMANCE
-            </button>
-            <button className="hover:bg-primary rounded-lg hover:text-white w-1/5 text-center h-12">
+            </Button>
+            <Button variant='ghost' className="hover:bg-primary rounded-lg hover:text-white w-1/5 text-center h-12">
               EXTRA
-            </button>
+            </Button>
           </ul>
           <hr className="border-4 border-tertiary mt-2" />
           <div className="mt-8 flex flex-row">
