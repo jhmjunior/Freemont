@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Safety() {
   return (
@@ -12,7 +13,7 @@ export default function Safety() {
           <p className="font-bold font-title text-white text-5xl w-3/5">
             Num Freemont, a segurança não é um item opcional<span className="text-primary text-7xl">.</span></p>
           <p className="text-secondary text-lg font-bold py-8 w-3/5">
-            Para um carro deste porte, a segurança é <span className="text-primary">indispensável</span>. Com construção baseada no mercado americano, e 5 estrelas no Euro NCAP, o carro possui 7 airbags, protegendo a você e sua família em situações perigosas.
+            Para um carro deste porte, a segurança é <span className="text-primary">indispensável</span>. Com construção baseada no mercado americano, e 5 estrelas no <Link className="underline" target="_blank" href='https://www.euroncap.com/en/results/fiat/freemont/10969'>Euro NCAP</Link>, o carro possui 7 airbags, protegendo a você e sua família em situações perigosas.
           </p>
         </span>
         <Image
