@@ -27,7 +27,7 @@ export default function Safety() {
           alt="Carro: Fiat Freemont em alta velocidade"
           width={700}
           height={385}
-          src="/airbags2.jpg"
+          src="/airbags3.jpg"
         />
         <span className="flex flex-col w-4/6 justify-between items-end">
           <p className="text-secondary text-lg font-bold py-8 w-3/5">

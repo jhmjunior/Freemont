@@ -13,7 +13,7 @@ export default function Extra() {
           alt="Carro: Fiat Freemont em alta velocidade"
           width={400}
           height={400}
-          src="/TetoSolar.jpg"
+          src="/TetoSolar.jpeg"
         />
         <span className="flex flex-col w-4/6 justify-between items-end">
           <p className="text-primary text-lg font-bold py-8 w-3/5">

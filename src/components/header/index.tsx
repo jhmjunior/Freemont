@@ -1,3 +1,5 @@
+import { Button } from "../ui/button";
+
 export default function Header() {
   return (
     <header className="flex items-center justify-between h-20 w-full font-['Poppins']">
@@ -5,18 +7,18 @@ export default function Header() {
         FREEMONT
       </h1>
       <ul className="flex justify-between w-1/3 font-bold text-white cursor-pointer mr-8 text-lg">
-        <li className="hover:text-primary">
+        <Button variant="link">
           O Carro
-        </li>
-        <li className="hover:text-primary">
+        </Button>
+        <Button variant="link">
           Segurança
-        </li>
-        <li className="hover:text-primary">
+        </Button>
+        <Button variant="link">
           Extra
-        </li>
-        <li className="hover:text-primary">
+        </Button>
+        <Button variant="link">
           Contato
-        </li>
+        </Button>
       </ul>
     </header>
   )
