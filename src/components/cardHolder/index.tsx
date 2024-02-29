@@ -19,7 +19,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 interface item {
   id: string,
-  category: 'DESIGN' | 'INTERIOR' | 'TECNOLOGIA' | 'PERFORMNCE' | 'EXTRA',
+  category: string,
   title: string,
   description: string,
   image: string
@@ -29,6 +29,8 @@ export default function CardHolder() {
   const [selectedFilters, setSelectedFilters] = useState([])
   const [filteredItems, setFilteredItems] = useState(items);
   let filters = ["DESIGN", "INTERIOR", "TECNOLOGIA", "PERFORMANCE", "EXTRA"]
+  // const pages = indexOf
+  // const 
 
   const handleFilterButtonCLick = (selectedCategory) => {
     if (selectedFilters.includes(selectedCategory)) {
@@ -38,6 +40,16 @@ export default function CardHolder() {
       setSelectedFilters([...selectedFilters, selectedCategory])
     }
   }
+
+/* 
+Fazer useEffect e useState para controlar a página do arquivo, onde, se o item puxado for página A, só mostrar os itens da página A, e fechá-la ao clicar no botão para a página B.
+
+OU
+
+mudar o esquema inteiro para o vídeo 
+https://www.youtube.com/watch?v=8dYC3NQK6ns
+aproximadamente 26 minutos
+*/
 
   useEffect(() => {
     filterItems()
@@ -58,7 +70,7 @@ export default function CardHolder() {
 
 
   return (
-    <div className="bg-white h-4/5 px-8 my-8">
+    <div className="bg-white px-8 my-8">
       <h1 className="text-5xl font-bold py-12 text-tertiary">
         O Carro<span className="text-primary text-6xl">:</span>
       </h1>
@@ -71,18 +83,22 @@ export default function CardHolder() {
             key={`filters-${idx}`}
             variant='ghost'
           >
+            <label htmlFor="buttonInput">
+              <input type="radio" className="hidden" name="buttonInput" />
+            </label>
             {category}
+
           </Button>
         ))}
       </div>
       <Separator className="border-4 border-tertiary mt-2" />
-      <div className="mt-8 flex flex-row">
-        <div className="w-full">
-          <Carousel className="max-w-lg">
-            <CarouselContent className="">
-              {filteredItems.map((item, idx) => (
-                <Card key={`items-${idx}`}>
-                  <div>
+      <div className="flex items-center flex-col">
+        <Carousel className="max-w-screen-2xl">
+          <CarouselContent className="">
+            {filteredItems.map((item, idx) => (
+              <CarouselItem key={`items-${idx}`}>
+                <Card className="flex flex-row" >
+                  <div className="flex items-center">
                     <CardHeader>
                       <CardDescription className="text-primary">
                         {item.category}
@@ -90,19 +106,24 @@ export default function CardHolder() {
                       <CardTitle>
                         <span className="text-primary text-6xl">.</span> {item.title}
                       </CardTitle>
+                      <Image
+                        width={500}
+                        height={200}
+                        src={item.image}
+                        alt={item.alt}
+                      />
                     </CardHeader>
                     <CardContent>
                       <p>{item.description}</p>
                     </CardContent>
                   </div>
                 </Card>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </div>
   )
